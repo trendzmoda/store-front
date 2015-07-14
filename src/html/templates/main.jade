@@ -1,0 +1,14 @@
+//- template
+extends ./base
+
+//- dependencies
+include ../../component/main-header/main-header
+
+//- scripts
+block baseScripts
+  +js('main')
+
+//- content
+block baseContent
+  +main-header
+  block content

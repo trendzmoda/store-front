@@ -22,9 +22,36 @@
       flex 0 0 25%
       padding 2em 0 0 2em
 
+  &__item
+    display flex
+
+  &__wrapper
+    background #fff
+    flex 1
+
   &__image
     display block
     width 100%
 
+  &__info
+    padding 1em
+
+  &__name,
+  &__price
+    font-family $font-heading
+
+  &__price-wrapper
+    margin-left 0.5em
+
+  &__price
+    border 3px solid darken(#fff, 10)
+    color darken(#fff, 75)
+    padding 0.2em 0.5em
+
   &__name
+    font-size rem(16)
     text-transform uppercase
+
+  &__description
+    color darken(#fff, 50)
+    font-size rem(12)

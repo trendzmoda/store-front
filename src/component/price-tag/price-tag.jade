@@ -1,2 +1,2 @@
-mixin price-tag(price)
-  p.price-tag R$ #{toPrice(price)}
+mixin price-tag(price, baseClass)
+  p.price-tag(class=baseClass) R$ #{toPrice(price)}

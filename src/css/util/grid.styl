@@ -3,18 +3,18 @@
 
   display flex
   flex-wrap wrap
-  margin-top -($gutter)
+  margin-top -($gutter / 2)
 
   +breakpoint(sm)
-    margin-left -($gutter)
+    margin -($gutter) 0 0 -($gutter)
 
   > .grid__cell
     flex 0 0 100%
-    padding-top $gutter
+    padding-top ($gutter / 2)
 
     +breakpoint(sm)
       flex 1
-      padding-left $gutter
+      padding $gutter 0 0 $gutter
 
     &.is-dummy
       flex none

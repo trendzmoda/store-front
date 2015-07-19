@@ -1,0 +1,36 @@
+.grid
+  $gutter = 1em
+
+  display flex
+  flex-wrap wrap
+  margin-top -($gutter)
+
+  +breakpoint(sm)
+    margin-left -($gutter)
+
+  > .grid__cell
+    flex 0 0 100%
+    padding-top $gutter
+
+    +breakpoint(sm)
+      flex 1
+      padding-left $gutter
+
+    &.is-dummy
+      flex none
+
+  &.not-responsive
+    margin-left -($gutter)
+
+    > .grid__cell
+      flex 1
+      padding-left $gutter
+
+      &.is-dummy
+        flex none
+
+  &.no-gutter
+    margin 0
+
+    > .grid__cell
+      padding 0

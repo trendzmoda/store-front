@@ -1,0 +1,8 @@
+//- dependencies
+include ./item
+
+//- mixin
+mixin showcase(s)
+  ul.showcase.grid
+    each item in s.items
+      +showcase-item(item)

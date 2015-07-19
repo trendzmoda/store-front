@@ -1,0 +1,41 @@
+'use strict'
+
+/**
+ * dependencies
+ */
+var _ = require('lodash')
+
+/**
+ * settings
+ */
+var items = [{
+  name: 'Foo',
+  description: 'Lorem ipsum dolor sit amet',
+  url: '/product-name',
+  image: 'http://lorempixel.com/250/250/fashion/1',
+  price: 79.90
+}, {
+  name: 'Bar',
+  description: 'Consectetur adipisicing elit',
+  url: '/product-name',
+  image: 'http://lorempixel.com/250/250/fashion/2',
+  price: 479.90
+}]
+
+/**
+ * showcase data generator
+ * @param  {object} settings [settings object]
+ * @return {object}          [showcase data object]
+ */
+function showcase(settings) {
+  var qty = settings.qty
+
+  return {
+    items: _.flatten(_.times(Math.ceil(qty / items.length), function () { return items.concat(items) })).slice(0, qty)
+  }
+}
+
+/**
+ * public
+ */
+module.exports = showcase

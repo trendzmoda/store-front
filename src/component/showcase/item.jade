@@ -1,0 +1,14 @@
+//- dependencies
+include ../price-tag/price-tag
+
+mixin showcase-item(s)
+  li.showcase__item.grid__cell
+    a.h-block(href=s.url, title='Ver detalhes')
+      img.showcase__image(src=s.image, alt=s.name)
+
+      footer.grid.no-gutter.not-responsive
+        .grid__cell
+          h3.showcase__name #{s.name}
+          p #{s.description}
+        .grid__cell.is-dummy
+          +price-tag(s.price)

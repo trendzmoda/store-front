@@ -1,6 +1,9 @@
 //- template
 extends ./templates/main
 
+//- dependencies
+include ../component/showcase/showcase
+
 //- content
 block content
-  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat libero reiciendis, fugiat, minus harum cupiditate molestiae quod nulla dicta laboriosam non dolor, perspiciatis quidem id fugit veritatis blanditiis dolorum voluptatum.
+  +showcase(data.showcase({ qty: 8 }))

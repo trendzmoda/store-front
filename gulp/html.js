@@ -9,6 +9,7 @@ var notify = require('gulp-notify')
 var changed = require('gulp-changed')
 var jade = require('gulp-jade')
 var browserSync = require('browser-sync')
+var requireDir = require('require-dir')
 
 /**
  * settings
@@ -26,7 +27,11 @@ gulp.task('html', function () {
       pretty: true,
       locals: {
         config: require('../config'),
-        ENV: process.env.NODE_ENV
+        data: requireDir('../data', { camelcase: true }),
+        ENV: process.env.NODE_ENV,
+        toPrice: function (price) {
+          return price.toFixed(2).replace('.', ',')
+        }
       }
     }))
     .pipe(gulp.dest(DIST))

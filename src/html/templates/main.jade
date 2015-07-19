@@ -2,13 +2,19 @@
 extends ./base
 
 //- dependencies
+include ../../component/main-content/main-content
 include ../../component/main-header/main-header
 
 //- scripts
 block baseScripts
   +js('main')
 
+//- styles
+block baseStyles
+  +css('main')
+
 //- content
 block baseContent
   +main-header
-  block content
+  +main-content
+    block content

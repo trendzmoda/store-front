@@ -1,2 +1,6 @@
-mixin price-tag(price, baseClass)
-  p.price-tag(class=baseClass) R$ #{toPrice(price)}
+mixin price-tag(s, baseClass)
+  .price-tag(class=baseClass)
+    if s.listPrice
+      p.price-tag__item.is-list R$ #{toPrice(s.listPrice)}
+    p.price-tag__item.is-total.h-ib R$ #{toPrice(s.price)}
+    p.price-tag__item.is-installment.h-ib ou #{s.times}x R$ #{toInstallment(s.price, s.times)}

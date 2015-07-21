@@ -20,6 +20,10 @@ var DIST = './dist/'
  * task
  */
 gulp.task('html', function () {
+  function $(price) {
+    return price.toFixed(2).replace('.', ',')
+  }
+
   gulp.src('./src/html/*.jade')
     .pipe(plumber({ errorHandler: notify.onError('CSS Error: <%= error.message %>') }))
     .pipe(changed(DIST))
@@ -29,8 +33,9 @@ gulp.task('html', function () {
         config: require('../config'),
         data: requireDir('../data', { camelcase: true }),
         ENV: process.env.NODE_ENV,
-        toPrice: function (price) {
-          return price.toFixed(2).replace('.', ',')
+        toPrice: $,
+        toInstallment: function (price, times) {
+          return $(price / times)
         }
       }
     }))

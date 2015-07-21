@@ -1,15 +1,18 @@
 //- dependencies
 include ../price-tag/price-tag
+include ../sale-tag/sale-tag
 
 mixin showcase-item(s)
   li.showcase__item.grid__cell
     a.showcase__wrapper.h-block(href=s.url, title='Ver detalhes')
+      if s.listPrice
+        +sale-tag('sale')
+
       img.showcase__image(src=s.image, alt=s.name)
 
-      footer.showcase__info.grid.no-gutter.not-responsive
-        .grid__cell
-          h3.showcase__name #{s.name}
-          p.showcase__description #{s.description}
+      section.showcase__info
+        h3.showcase__name #{s.name}
+        p.showcase__description #{s.description}
 
-        .grid__cell.is-dummy.showcase__price-wrapper
-          +price-tag(s.price, 'showcase__price')
+        .showcase__price-wrapper
+          +price-tag(s, 'showcase__price')

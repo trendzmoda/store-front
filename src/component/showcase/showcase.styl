@@ -1,4 +1,5 @@
 .showcase
+  margin -0.5em 0 0 -0.5em
 
   +breakpoint(sm)
     margin -1em 0 0 -1em
@@ -10,16 +11,21 @@
     margin -2em 0 0 -2em
 
   > .showcase__item
+    flex 0 0 50%
+    padding 0.5em 0 0 0.5em
+
     +breakpoint(sm)
-      flex 0 0 50%
       padding 1em 0 0 1em
 
     +breakpoint(md)
       flex 0 0 33.3333%
       padding 1.5em 0 0 1.5em
 
-    +breakpoint(xl)
+    +breakpoint(lg)
       flex 0 0 25%
+
+    +breakpoint(xl)
+      flex 0 0 20%
       padding 2em 0 0 2em
 
   &__item
@@ -27,6 +33,7 @@
 
   &__wrapper
     background #fff
+    position relative
     flex 1
 
   &__image
@@ -34,23 +41,25 @@
     width 100%
 
   &__info
-    padding 1em
+    padding 0.5em
+
+    +breakpoint(sm)
+      padding 1em
 
   &__name,
   &__price
     font-family $font-heading
 
   &__price-wrapper
-    margin-left 0.5em
+    padding-top 0.5rem
 
   &__price
-    border 3px solid darken(#fff, 10)
     color darken(#fff, 75)
-    padding 0.2em 0.5em
+    font-size rem(14)
 
   &__name
-    font-size rem(16)
     text-transform uppercase
+    font-size rem(16)
 
   &__description
     color darken(#fff, 50)

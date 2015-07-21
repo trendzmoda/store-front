@@ -13,13 +13,24 @@ var items = [{
   description: 'Lorem ipsum dolor sit amet',
   url: '/product-name',
   image: 'http://lorempixel.com/250/250/fashion/1',
-  price: 79.90
+  price: 79.90,
+  listPrice: 89.90,
+  times: 2
 }, {
   name: 'Bar',
   description: 'Consectetur adipisicing elit',
   url: '/product-name',
   image: 'http://lorempixel.com/250/250/fashion/2',
-  price: 479.90
+  price: 479.90,
+  listPrice: 549.90,
+  times: 5
+}, {
+  name: 'Baz',
+  description: 'Dolor consectetur ipsum',
+  url: '/product-name',
+  image: 'http://lorempixel.com/250/250/fashion/3',
+  price: 179.90,
+  times: 3
 }]
 
 /**

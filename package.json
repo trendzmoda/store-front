@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "gulp server"
+    "start": "gulp server",
+    "postinstall": "gulp build:dev"
   },
   "author": "Renan Couto <renancouto@gmail.com> (https://github.com/renancouto)",
   "license": "MIT",

@@ -2,8 +2,12 @@
 extends ./templates/main
 
 //- dependencies
+include ../component/main-banner/main-banner
 include ../component/showcase/showcase
 
 //- content
+block headerContent
+  +main-banner
+
 block content
   +showcase(data.showcase({ qty: 8 }))

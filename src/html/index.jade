@@ -2,6 +2,7 @@
 extends ./templates/main
 
 //- dependencies
+include ../component/content-header/content-header
 include ../component/main-banner/main-banner
 include ../component/showcase/showcase
 
@@ -10,4 +11,5 @@ block headerContent
   +main-banner
 
 block content
+  +content-header('Summer 2016', 'Lorem ipsum dolor sit amet')
   +showcase(data.showcase({ qty: 8 }))

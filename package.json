@@ -9,32 +9,34 @@
   },
   "author": "Renan Couto <renancouto@gmail.com> (https://github.com/renancouto)",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "autoprefixer-core": "^5.2.1",
     "browser-sync": "^2.7.13",
-    "gulp": "^3.9.0",
-    "gulp-changed": "^1.2.1",
-    "gulp-combine-mq": "^0.4.0",
-    "gulp-jade": "^1.0.1",
-    "gulp-nodemon": "^2.0.3",
-    "gulp-notify": "^2.2.0",
-    "gulp-plumber": "^1.0.1",
-    "gulp-postcss": "^5.1.9",
-    "gulp-stylus": "^2.0.5"
-  },
-  "dependencies": {
     "browserify": "^10.2.6",
     "del": "^1.2.0",
     "event-stream": "^3.3.1",
     "express": "^4.13.1",
     "glob": "^5.0.13",
+    "gulp": "^3.9.0",
+    "gulp-changed": "^1.2.1",
+    "gulp-combine-mq": "^0.4.0",
     "gulp-env": "^0.2.0",
     "gulp-eslint": "^0.15.0",
     "gulp-flatten": "^0.1.0",
+    "gulp-jade": "^1.0.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-postcss": "^5.1.9",
     "gulp-rename": "^1.2.2",
+    "gulp-stylus": "^2.0.5",
     "lodash": "^3.10.0",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.1",
     "vinyl-source-stream": "^1.1.0"
+  },
+  "devDependencies": {
+    "gulp-imagemin": "^2.3.0",
+    "gulp-newer": "^0.5.1",
+    "gulp-nodemon": "^2.0.3"
   }
 }

@@ -37,6 +37,7 @@
   "devDependencies": {
     "gulp-imagemin": "^2.3.0",
     "gulp-newer": "^0.5.1",
-    "gulp-nodemon": "^2.0.3"
+    "gulp-nodemon": "^2.0.3",
+    "gulp-svg-sprite": "^1.2.7"
   }
 }

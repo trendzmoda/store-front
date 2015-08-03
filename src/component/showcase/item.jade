@@ -3,7 +3,7 @@ include ../price-tag/price-tag
 include ../sale-tag/sale-tag
 
 mixin showcase-item(s)
-  li.showcase__item.grid__cell
+  li.showcase__item.u-grid__cell
     a.showcase__wrapper.h-block(href=s.url, title='Ver detalhes')
       if s.listPrice
         +sale-tag('sale')

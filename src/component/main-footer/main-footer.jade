@@ -1,3 +1,17 @@
 mixin main-footer
-  footer.main-footer
-    p trendz.moda
+  footer.c-main-footer
+    .h-limiter
+      .u-grid
+        .u-grid__cell.u-grid__cell--1-5
+          h3.c-main-footer__heading TRENDZ.MODA
+          ul
+            each item in data.footerNav
+              li.c-main-footer__text: a(href=item.url) #{item.label}
+
+        .u-grid__cell.u-grid__cell--2-5
+          h3.c-main-footer__heading Sobre
+          p.c-main-footer__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem repellat quos tempora, aspernatur, veritatis consequuntur id reiciendis vitae doloribus ut facere est ipsa dolores quo quis consequatur. Labore ex, odio.
+
+    div.c-main-footer__bottom
+      .h-limiter
+        p.c-main-footer__text.c-main-footer__text--faded © TRENDZ.MODA #{new Date().getFullYear()} - Todos os direitos reservados - CNPJ 00.000.000/0001-00

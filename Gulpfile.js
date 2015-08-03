@@ -13,4 +13,5 @@ require('./gulp/img')
 if (process.env.NODE_ENV !== 'production') {
   require('./gulp/imagemin')
   require('./gulp/server')
+  require('./gulp/svg')
 }

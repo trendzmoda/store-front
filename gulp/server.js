@@ -13,7 +13,7 @@ var config = require('../config')
  */
 gulp.task('watch', function () {
   gulp.watch([ './src/**/*.styl' ], [ 'css' ])
-  // gulp.watch([ './src/**/*.js' ], [ 'js' ])
+  gulp.watch([ './src/**/*.js' ], [ 'js' ])
   gulp.watch([ './src/**/*.jade' ], [ 'html' ])
 })
 

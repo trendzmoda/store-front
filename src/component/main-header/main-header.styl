@@ -1,17 +1,22 @@
-.main-header
-  background rgba(255,255,255,0.3)
+.c-main-header
   margin-bottom 2rem
+  padding 0.5rem 0
   position fixed
   width 100%
   top 0
   z-index 1
+  transition 0.5s
+
+  &--active
+    background #fff
+    box-shadow 0 1px 2px rgba(0,0,0,.1)
 
   &__wrapper
     .root &
       padding 0
 
       +breakpoint(xl)
-        padding 0 2rem
+        padding 0 0.5rem
 
   &__logo
     background #fff

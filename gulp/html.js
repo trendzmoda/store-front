@@ -25,7 +25,7 @@ gulp.task('html', function () {
   }
 
   gulp.src('./src/html/*.jade')
-    .pipe(plumber({ errorHandler: notify.onError('CSS Error: <%= error.message %>') }))
+    .pipe(plumber({ errorHandler: notify.onError('HTML Error: <%= error.message %>') }))
     .pipe(changed(DIST))
     .pipe(jade({
       pretty: true,

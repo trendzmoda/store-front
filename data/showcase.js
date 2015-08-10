@@ -11,7 +11,7 @@ var _ = require('lodash')
 var items = [{
   name: 'Foo',
   description: 'Lorem ipsum dolor sit amet',
-  url: '/product-name',
+  url: '/product.html',
   image: 'http://lorempixel.com/225/300/fashion/1',
   price: 79.90,
   listPrice: 89.90,
@@ -19,7 +19,7 @@ var items = [{
 }, {
   name: 'Bar',
   description: 'Consectetur adipisicing elit',
-  url: '/product-name',
+  url: '/product.html',
   image: 'http://lorempixel.com/225/300/fashion/2',
   price: 479.90,
   listPrice: 549.90,
@@ -27,7 +27,7 @@ var items = [{
 }, {
   name: 'Baz',
   description: 'Dolor consectetur ipsum',
-  url: '/product-name',
+  url: '/product.html',
   image: 'http://lorempixel.com/225/300/fashion/3',
   price: 179.90,
   times: 3

@@ -6,7 +6,6 @@
 var gulp = require('gulp')
 var nodemon = require('gulp-nodemon')
 var browserSync = require('browser-sync')
-var config = require('../config')
 
 /**
  * watch task
@@ -31,5 +30,5 @@ gulp.task('server', [ 'env:dev', 'watch', 'browserSync' ], function () {
  * browser sync task
  */
 gulp.task('browserSync', [ 'build:dev' ], function() {
-  browserSync({ proxy: 'http://localhost:' + config.APP_PORT })
+  browserSync.init({ server: { baseDir: './dist' }})
 })

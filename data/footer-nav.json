@@ -1,5 +1,6 @@
 [
   { "label": "Home", "url": "/" },
-  { "label": "Sobre", "url": "/sobre.html" },
-  { "label": "Fale Conosco", "url": "/fale-conosco.hmtl" }
+  { "label": "Sacola", "url": "/bag.html" },
+  { "label": "Sobre", "url": "/about.html" },
+  { "label": "Fale Conosco", "url": "/contact.html" }
 ]

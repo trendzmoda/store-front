@@ -4,7 +4,6 @@
  * dependencies
  */
 var gulp = require('gulp')
-var nodemon = require('gulp-nodemon')
 var browserSync = require('browser-sync')
 
 /**
@@ -17,18 +16,13 @@ gulp.task('watch', function () {
 })
 
 /**
- * server task
- */
-gulp.task('server', [ 'env:dev', 'watch', 'browserSync' ], function () {
-  nodemon({ script: 'index.js' })
-    .on('restart', function () {
-      setTimeout(function () { browserSync.reload({ stream: false }) }, 1000)
-    })
-})
-
-/**
  * browser sync task
  */
 gulp.task('browserSync', [ 'build:dev' ], function() {
   browserSync.init({ server: { baseDir: './dist' }})
 })
+
+/**
+ * server task
+ */
+gulp.task('server', [ 'env:dev', 'watch', 'browserSync' ])

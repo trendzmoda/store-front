@@ -19,12 +19,12 @@ var DIST = './dist/'
 /**
  * task
  */
-gulp.task('html', function () {
+gulp.task('jade', function () {
   function $(price) {
     return price.toFixed(2).replace('.', ',')
   }
 
-  gulp.src('./src/html/*.jade')
+  return gulp.src('./src/html/*.jade')
     .pipe(plumber({ errorHandler: notify.onError('HTML Error: <%= error.message %>') }))
     .pipe(changed(DIST))
     .pipe(jade({
@@ -40,5 +40,6 @@ gulp.task('html', function () {
       }
     }))
     .pipe(gulp.dest(DIST))
-    .pipe(browserSync.reload({ stream: true }))
 })
+
+gulp.task('html', [ 'jade' ], browserSync.reload)

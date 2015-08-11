@@ -1,0 +1,12 @@
+//- dependencies
+include ../price-tag/price-tag
+
+mixin product-description(s)
+  .c-product-description
+    h1.c-product-description__name #{s.name}
+    p.c-product-description__description #{s.description}
+    +price-tag(s, 'c-product-description__price')
+
+    form
+      input(type='hidden', name='id', value=s.id)
+      button Add to bag

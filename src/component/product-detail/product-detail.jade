@@ -1,0 +1,11 @@
+//- dependencies
+include ../product-description/product-description
+include ../product-gallery/product-gallery
+
+mixin product-detail(s)
+  section.c-product-detail.u-grid
+    .u-grid__item.u-grid__item--2-3
+      +product-gallery(s)
+
+    .u-grid__item.u-grid__item--1-3
+      +product-description(s)

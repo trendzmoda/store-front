@@ -4,7 +4,10 @@ extends ./templates/main
 //- vars
 block vars
   - meta.title = 'Produto'
+  
+//- dependencies
+include ../component/product-detail/product-detail
 
 //- content
 block content
-  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores adipisci ipsum debitis velit, at veniam dolorem sapiente molestias assumenda magnam perferendis quam, aliquam asperiores, aperiam molestiae nostrum voluptate beatae vitae.
+  +product-detail(data.showcase({ qty: 1 }).items[0])

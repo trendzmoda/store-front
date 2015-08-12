@@ -9,4 +9,14 @@ mixin product-description(s)
 
     form
       input(type='hidden', name='id', value=s.id)
-      button Add to bag
+
+      if s.sizes
+        .c-product-description__sizes-wrapper
+          label
+            span Tamanho
+          select
+            each size in s.sizes
+              option(value=size) #{size}
+
+      .c-product-description__controls
+        button.c-button Add to bag

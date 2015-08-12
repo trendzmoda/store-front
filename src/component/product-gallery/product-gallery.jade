@@ -1,11 +1,11 @@
 mixin product-gallery(s)
   .c-product-gallery.u-grid.u-grid--gutterless
 
+    .u-grid__cell
+      img.c-product-gallery__image(src=s.imageLarge, alt=s.name)
+
     nav.c-product-gallery__nav
       - n = 0
       while n < s.galleryCount
         li.c-product-gallery__nav-item
           img.c-product-gallery__nav-image(src=s.image.substr(0, s.image.length - 1) + '/' + n++, alt=s.name)
-
-    .u-grid__cell
-      img.c-product-gallery__image(src=s.imageLarge, alt=s.name)

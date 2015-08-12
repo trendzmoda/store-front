@@ -14,8 +14,9 @@ var items = [{
   description: 'Lorem ipsum dolor sit amet',
   url: '/product.html',
   image: 'http://lorempixel.com/225/300/fashion/1',
-  imageLarge: 'http://lorempixel.com/525/800/fashion/1',
+  imageLarge: 'http://lorempixel.com/600/800/fashion/1',
   galleryCount: 5,
+  sizes: [ 'P', 'M', 'G' ],
   price: 79.90,
   listPrice: 89.90,
   times: 2

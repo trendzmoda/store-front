@@ -8,6 +8,10 @@ block vars
 //- dependencies
 include ../component/product-detail/product-detail
 
+//- scripts
+block scripts
+  +js('vendor/swiper')
+
 //- content
 block content
   +product-detail(data.showcase({ qty: 1 }).items[0])

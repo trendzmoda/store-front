@@ -57,7 +57,12 @@ gulp.task('browserify', function () {
   })
 })
 
+gulp.task('js:copy', function () {
+  gulp.src('./src/js/vendor/*.*')
+    .pipe(gulp.dest('./dist/js/vendor'))
+})
+
 /**
  * js task
  */
-gulp.task('js', [ 'browserify' ])
+gulp.task('js', [ 'browserify', 'js:copy' ])

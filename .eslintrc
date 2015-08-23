@@ -12,3 +12,4 @@ ecmaFeatures:
 
 globals:
   $: true
+  Swiper: true

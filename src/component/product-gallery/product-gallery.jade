@@ -1,11 +1,20 @@
 mixin product-gallery(s)
   .c-product-gallery.u-grid.u-grid--gutterless
-
     .u-grid__cell
-      img.c-product-gallery__image(src=s.imageLarge, alt=s.name)
+      .swiper-container
+        .swiper-wrapper
+          - i = 0
+          while i < s.galleryCount
+            - isFirst = i === 0
+            - img = s.image.substr(0, s.image.length - 1) + i++
+            .swiper-slide
+              img.c-product-gallery__image.swiper-lazy(data-src=img, alt=s.name)
+
+        .swiper-button-next.swiper-button-white
+        .swiper-button-prev.swiper-button-white
 
     nav.c-product-gallery__nav
       - n = 0
       while n < s.galleryCount
         li.c-product-gallery__nav-item
-          img.c-product-gallery__nav-image(src=s.image.substr(0, s.image.length - 1) + '/' + n++, alt=s.name)
+          img.c-product-gallery__nav-image(src=s.image.substr(0, s.image.length - 1) + n++, alt=s.name)

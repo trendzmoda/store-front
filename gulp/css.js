@@ -21,7 +21,7 @@ var DIST = './dist/css'
 /**
  * css task
  */
-gulp.task('css:build', function () {
+gulp.task('stylus', function () {
   return gulp.src('./src/css/*.styl')
     .pipe(plumber({ errorHandler: notify.onError('CSS Error: <%= error.message %>') }))
     .pipe(changed(DIST))
@@ -32,10 +32,4 @@ gulp.task('css:build', function () {
     .pipe(browserSync.reload({ stream: true }))
 })
 
-gulp.task('css:vendor', function () {
-  gulp.src('./bower_components/normalize-css/normalize.css')
-    .pipe(rename({ extname: '.styl' }))
-    .pipe(gulp.dest('./src/css/vendor'))
-})
-
-gulp.task('css', [ 'css:vendor', 'css:build' ])
+gulp.task('css', [ 'stylus' ])
